@@ -108,3 +108,65 @@ h1 {
     box-shadow: inset 0 2px 4px var(--shadow);
     transition: background-color 0.3s, color 0.3s;
 }
+
+.separator {
+    margin: 40px 0;
+    border: 0;
+    border-top: 1px solid var(--shadow);
+}
+
+.contact-form h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--shadow);
+    border-radius: 6px;
+    background-color: var(--number-bg);
+    color: var(--text-color);
+    font-family: inherit;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--btn-bg);
+}
+
+.input-group textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+#submit-btn {
+    width: 100%;
+    background-color: var(--text-color);
+    color: var(--container-bg);
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: opacity 0.3s, transform 0.1s;
+}
+
+#submit-btn:hover {
+    opacity: 0.9;
+}
+
+#submit-btn:active {
+    transform: scale(0.98);
+}
+
