@@ -170,6 +170,47 @@ h1 {
     transform: scale(0.98);
 }
 
+.detection-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#start-btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#start-btn:hover {
+    background-color: #2ecc71;
+    transform: translateY(-2px);
+}
+
+#webcam-container {
+    margin: 0 auto 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+}
+
+#label-container {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+#label-container div {
+    margin-bottom: 5px;
+}
+
 #disqus_thread {
     margin-top: 20px;
 }
