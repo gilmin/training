@@ -21,8 +21,13 @@
 
         <div class="detection-section">
             <h2>Human/Non-human Detection</h2>
-            <button type="button" id="start-btn" onclick="init()">Start Test</button>
-            <div id="webcam-container"></div>
+            <div class="upload-container">
+                <input type="file" id="image-upload" accept="image/*">
+                <label for="image-upload" class="upload-label">📁 Choose an Image</label>
+            </div>
+            <div id="image-container">
+                <img id="preview-image" src="#" alt="Preview" style="display: none;">
+            </div>
             <div id="label-container"></div>
         </div>
 

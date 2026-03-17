@@ -175,8 +175,16 @@ h1 {
     margin-bottom: 30px;
 }
 
-#start-btn {
-    padding: 10px 20px;
+.upload-container {
+    margin-bottom: 20px;
+}
+
+#image-upload {
+    display: none;
+}
+
+.upload-label {
+    padding: 12px 24px;
     font-size: 1.1rem;
     background-color: #27ae60;
     color: #fff;
@@ -184,21 +192,30 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-bottom: 15px;
+    display: inline-block;
 }
 
-#start-btn:hover {
+.upload-label:hover {
     background-color: #2ecc71;
     transform: translateY(-2px);
 }
 
-#webcam-container {
+#image-container {
     margin: 0 auto 15px;
-    border: 2px solid #ddd;
+    border: 2px dashed #ddd;
     border-radius: 10px;
-    overflow: hidden;
     width: 200px;
     height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#preview-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 #label-container {
