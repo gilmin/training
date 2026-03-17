@@ -170,3 +170,7 @@ h1 {
     transform: scale(0.98);
 }
 
+#disqus_thread {
+    margin-top: 20px;
+}
+
