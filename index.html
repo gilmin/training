@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple and high-quality utility site featuring a Lotto Number Generator and an AI-powered Human/Non-human Detection tool.">
+    <meta name="keywords" content="Lotto, AI, Human Detection, Lotto Generator, Teachable Machine">
     <meta name="google-adsense-account" content="ca-pub-3025386537406158">
-    <title>Lotto Number Generator</title>
+    <title>High Quality Utility Site - Lotto & AI</title>
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3025386537406158"
      crossorigin="anonymous"></script>
@@ -12,18 +14,44 @@
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
 <body>
-    <div class="container">
+    <header class="navbar">
+        <nav class="container nav-wrapper">
+            <div class="logo">Utility Hub</div>
+            <ul class="nav-links">
+                <li><a href="#lotto">Lotto</a></li>
+                <li><a href="#ai-test">AI Test</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container main-content">
         <div class="theme-switch-wrapper">
             <button id="theme-toggle">🌙 Dark Mode</button>
         </div>
-        <h1>Lotto Number Generator</h1>
-        <button id="generate-btn">Generate Numbers</button>
-        <div id="numbers-container"></div>
+
+        <section id="lotto" class="tool-section">
+            <h1>Lotto Number Generator</h1>
+            <p class="description">Are you looking for a set of lucky numbers for the upcoming lottery? Our Lotto Number Generator provides a completely random set of 6 numbers from 1 to 45, ensuring a fair and unbiased selection process. Simply click the button below to generate your unique numbers.</p>
+            <button id="generate-btn">Generate Numbers</button>
+            <div id="numbers-container"></div>
+            <div class="instructions">
+                <h3>How to use:</h3>
+                <ol>
+                    <li>Click the "Generate Numbers" button.</li>
+                    <li>Wait for the numbers to appear with a smooth animation.</li>
+                    <li>Use these numbers as your lucky selection for the week!</li>
+                </ol>
+            </div>
+        </section>
 
         <hr class="separator">
 
-        <div class="detection-section">
-            <h2>Human/Non-human Detection</h2>
+        <section id="ai-test" class="tool-section">
+            <h2>Human/Non-human Detection (AI Powered)</h2>
+            <p class="description">Experience the power of modern Artificial Intelligence. Using a model trained with Google's Teachable Machine, this tool can analyze an image and determine whether it contains a human or not. Upload an image to see the AI in action.</p>
             <div class="upload-container">
                 <input type="file" id="image-upload" accept="image/*">
                 <label for="image-upload" class="upload-label">📁 Choose an Image</label>
@@ -32,48 +60,65 @@
                 <img id="preview-image" src="#" alt="Preview" style="display: none;">
             </div>
             <div id="label-container"></div>
-        </div>
+            <div class="instructions">
+                <h3>How to use:</h3>
+                <ul>
+                    <li>Click on "Choose an Image" to select a file from your device.</li>
+                    <li>Ensure the person or object is clearly visible in the image.</li>
+                    <li>The AI will automatically provide a prediction with a probability score.</li>
+                </ul>
+            </div>
+        </section>
 
         <hr class="separator">
 
-        <div class="contact-form">
+        <section id="about" class="about-section">
+            <h2>About Utility Hub</h2>
+            <p>Utility Hub is dedicated to providing simple, efficient, and interactive web tools for everyday use. Our mission is to combine practicality with modern technology, such as AI and random data generation, to create a high-quality user experience. We believe that small, well-designed tools can make the web a more helpful place.</p>
+        </section>
+
+        <hr class="separator">
+
+        <section id="contact" class="contact-form">
             <h2>Partner with Us</h2>
+            <p class="description">We are always open to collaboration and feedback. If you have any inquiries regarding partnerships or have suggestions for new tools, please use the form below.</p>
             <form action="https://formspree.io/f/mreyybvy" method="POST">
                 <div class="input-group">
-                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="text" name="name" placeholder="Name" required aria-label="Name">
                 </div>
                 <div class="input-group">
-                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="email" name="email" placeholder="Email" required aria-label="Email">
                 </div>
                 <div class="input-group">
-                    <textarea name="message" placeholder="Message" required></textarea>
+                    <textarea name="message" placeholder="Message" required aria-label="Message"></textarea>
                 </div>
                 <button type="submit" id="submit-btn">Send Message</button>
             </form>
-        </div>
+        </section>
+
+        <hr class="separator">
+
+        <section id="privacy" class="privacy-section">
+            <h2>Privacy Policy</h2>
+            <p>Your privacy is important to us. Here's how we handle data:</p>
+            <ul>
+                <li><strong>Images:</strong> Any images uploaded for AI detection are processed locally on your browser using TensorFlow.js and are not stored on our servers.</li>
+                <li><strong>Contact Form:</strong> Information submitted via the contact form is managed by Formspree and used only for communication purposes.</li>
+                <li><strong>Cookies & Advertising:</strong> This site uses Google AdSense to serve advertisements. Google may use cookies to serve ads based on your previous visits to this or other websites. You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank">Google Ads Settings</a>.</li>
+                <li><strong>Comments:</strong> Comments are managed by Disqus, which may collect data according to their own privacy policy.</li>
+            </ul>
+        </section>
 
         <hr class="separator">
 
         <div id="disqus_thread"></div>
-        <script>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-            /*
-            var disqus_config = function () {
-            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            */
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://justforfun-6.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Utility Hub. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="main.js"></script>
 </body>
-</html>
+</html
